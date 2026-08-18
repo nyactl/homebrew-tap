@@ -5,21 +5,21 @@
 class TodoistCli < Formula
   desc "Fast, minimal Todoist CLI with a local SQLite cache"
   homepage "https://github.com/nyactl/todoist-cli"
-  version "1.19.0"
+  version "1.20.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nyactl/todoist-cli/releases/download/v1.19.0/todoist-cli_1.19.0_darwin_amd64.tar.gz"
-      sha256 "a424cdb40c6e1ca9035aa1bb9ea3bbe05af811f07a81152a4b6855cfa0ffe19c"
+      url "https://github.com/nyactl/todoist-cli/releases/download/v1.20.0/todoist-cli_1.20.0_darwin_amd64.tar.gz"
+      sha256 "29000949e11a43c228c0078b895856ef3a734a7b3e8c54df1c48fec4670c8f4f"
 
       define_method(:install) do
         bin.install "todoist-cli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nyactl/todoist-cli/releases/download/v1.19.0/todoist-cli_1.19.0_darwin_arm64.tar.gz"
-      sha256 "5a55852c78af8f9526b08b4d98ac560d2bcacea58e78fc1d8f5fbf39e7589bd7"
+      url "https://github.com/nyactl/todoist-cli/releases/download/v1.20.0/todoist-cli_1.20.0_darwin_arm64.tar.gz"
+      sha256 "b03715dc3e246617b3f775791e608c7f03e4e5de9e48a4694f4f935c10d8b41c"
 
       define_method(:install) do
         bin.install "todoist-cli"
@@ -29,15 +29,15 @@ class TodoistCli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nyactl/todoist-cli/releases/download/v1.19.0/todoist-cli_1.19.0_linux_amd64.tar.gz"
-      sha256 "1804fad9023d33cec472a45be49047e04970680e8fa47fb84e5a307096f0a093"
+      url "https://github.com/nyactl/todoist-cli/releases/download/v1.20.0/todoist-cli_1.20.0_linux_amd64.tar.gz"
+      sha256 "ef34fa3aec04562983df506ba5cdcd3a34b125105225b202dd3187bc720d22be"
       define_method(:install) do
         bin.install "todoist-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nyactl/todoist-cli/releases/download/v1.19.0/todoist-cli_1.19.0_linux_arm64.tar.gz"
-      sha256 "c4a28e0e73f5d3febab7ccca87bf52b66a8728dfb6b0803a7e14ed7d7170f970"
+      url "https://github.com/nyactl/todoist-cli/releases/download/v1.20.0/todoist-cli_1.20.0_linux_arm64.tar.gz"
+      sha256 "fa1681ebfaa36fa5702909b918d568e0846ba23de8a5a4a211b916f0e7cb2fd3"
       define_method(:install) do
         bin.install "todoist-cli"
       end
