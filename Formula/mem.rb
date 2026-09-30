@@ -5,21 +5,21 @@
 class Mem < Formula
   desc "Fast, atomic notes in plain Markdown. Yours forever."
   homepage "https://github.com/nyactl/mem"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nyactl/mem/releases/download/v0.2.0/mem_0.2.0_darwin_amd64.tar.gz"
-      sha256 "0d1852daf1b0e6bbccef6d0b006dff885b7973c226bf7b26e8d67e5f41df97e2"
+      url "https://github.com/nyactl/mem/releases/download/v0.2.1/mem_0.2.1_darwin_amd64.tar.gz"
+      sha256 "c270ae5c1249678e06a4b3051e704433c3908ac52170c2ca96aa3a0990fd4f0b"
 
       define_method(:install) do
         bin.install "mem"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nyactl/mem/releases/download/v0.2.0/mem_0.2.0_darwin_arm64.tar.gz"
-      sha256 "858f35fa84ad66273fb4337ada1285a4d8dab85159d921b17fc93970b05b0ed5"
+      url "https://github.com/nyactl/mem/releases/download/v0.2.1/mem_0.2.1_darwin_arm64.tar.gz"
+      sha256 "9bb0b8c8444e22cdbaca82d3fe2c230b00e7aef5d08f81a5fc2e0ffc36cac790"
 
       define_method(:install) do
         bin.install "mem"
@@ -29,15 +29,15 @@ class Mem < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nyactl/mem/releases/download/v0.2.0/mem_0.2.0_linux_amd64.tar.gz"
-      sha256 "87775b691cbaeba6138a36fde12650439e44a8f12e4c073ebd3c3b445e249def"
+      url "https://github.com/nyactl/mem/releases/download/v0.2.1/mem_0.2.1_linux_amd64.tar.gz"
+      sha256 "46a85e46023f8bfd02c9493368b4de73d3f7d72c0ca4548de1bcf67414d02692"
       define_method(:install) do
         bin.install "mem"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nyactl/mem/releases/download/v0.2.0/mem_0.2.0_linux_arm64.tar.gz"
-      sha256 "32ca9ac8a4fabe8d16d261cae9070fa49bc1e82c164d405fbb7fdbaf8c7c140b"
+      url "https://github.com/nyactl/mem/releases/download/v0.2.1/mem_0.2.1_linux_arm64.tar.gz"
+      sha256 "5c9e745e3f46c2bfd37a97496da8393489416995556454f4c093a6d67d53fb86"
       define_method(:install) do
         bin.install "mem"
       end
