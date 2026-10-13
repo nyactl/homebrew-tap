@@ -5,21 +5,21 @@
 class TixForJira < Formula
   desc "Your own Jira Cloud tickets from the terminal or as an MCP server, privacy-scoped and approval-gated"
   homepage "https://github.com/nyactl/tix-for-jira"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/nyactl/tix-for-jira/releases/download/v0.1.1/tix-for-jira_0.1.1_darwin_amd64.tar.gz"
-    sha256 "fe49a0fd465eed28b57b19b3e211d397d8aca8cfad2c2f6af5753dddd83027cf"
+    url "https://github.com/nyactl/tix-for-jira/releases/download/v0.2.0/tix-for-jira_0.2.0_darwin_amd64.tar.gz"
+    sha256 "c3668a110c6debd7c61ec4aa1816a0773a0b659e7d0fc846e5cf9ab6b089628a"
 
     define_method(:install) do
       bin.install "tix"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/nyactl/tix-for-jira/releases/download/v0.1.1/tix-for-jira_0.1.1_darwin_arm64.tar.gz"
-    sha256 "d7c47c7f6dc43be684e70adc540d45753f2a40c9fced264535968aa8decc812a"
+    url "https://github.com/nyactl/tix-for-jira/releases/download/v0.2.0/tix-for-jira_0.2.0_darwin_arm64.tar.gz"
+    sha256 "a7208c5c1f8347ca775b8a7fc79406e950287f41916698f3695e16e91e19b119"
 
     define_method(:install) do
       bin.install "tix"
