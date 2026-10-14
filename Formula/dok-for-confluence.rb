@@ -5,21 +5,21 @@
 class DokForConfluence < Formula
   desc "Confluence Cloud pages from the terminal or as an MCP server, limited to allowed spaces, every change approved"
   homepage "https://github.com/nyactl/dok-for-confluence"
-  version "0.1.3"
+  version "0.2.0"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/nyactl/dok-for-confluence/releases/download/v0.1.3/dok-for-confluence_0.1.3_darwin_amd64.tar.gz"
-    sha256 "f8f3284fa7daec83f9167d7022e51fe93393d33f0da1d69b5236d695075a5c5d"
+    url "https://github.com/nyactl/dok-for-confluence/releases/download/v0.2.0/dok-for-confluence_0.2.0_darwin_amd64.tar.gz"
+    sha256 "5713d13c39ed7a19bf215dab281c3af0a92d3d7b8fa078133e529bab3e73f1b8"
 
     define_method(:install) do
       bin.install "dok"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/nyactl/dok-for-confluence/releases/download/v0.1.3/dok-for-confluence_0.1.3_darwin_arm64.tar.gz"
-    sha256 "e63951763567fbfd18310e7f58809a5f83fe94a06301b5884d3826e46aa409e8"
+    url "https://github.com/nyactl/dok-for-confluence/releases/download/v0.2.0/dok-for-confluence_0.2.0_darwin_arm64.tar.gz"
+    sha256 "0f22fe4db7f8efe26659d8d2b8470d0553c016c4dfd0bc3c2bd323d1141273d5"
 
     define_method(:install) do
       bin.install "dok"
