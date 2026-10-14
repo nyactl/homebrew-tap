@@ -5,24 +5,42 @@
 class TixForJira < Formula
   desc "Your own Jira Cloud tickets from the terminal or as an MCP server, privacy-scoped and approval-gated"
   homepage "https://github.com/nyactl/tix-for-jira"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
-  depends_on :macos
 
-  if Hardware::CPU.intel?
-    url "https://github.com/nyactl/tix-for-jira/releases/download/v0.2.0/tix-for-jira_0.2.0_darwin_amd64.tar.gz"
-    sha256 "c3668a110c6debd7c61ec4aa1816a0773a0b659e7d0fc846e5cf9ab6b089628a"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/nyactl/tix-for-jira/releases/download/v0.3.0/tix-for-jira_0.3.0_darwin_amd64.tar.gz"
+      sha256 "5de9fcd3bf7a2c1d91e284c9bb4a97ee668cabea85b7bc2bae4f7bfa5e357a62"
 
-    define_method(:install) do
-      bin.install "tix"
+      define_method(:install) do
+        bin.install "tix"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/nyactl/tix-for-jira/releases/download/v0.3.0/tix-for-jira_0.3.0_darwin_arm64.tar.gz"
+      sha256 "45a61b58b296a12cda1727b1e8814c51881a3e6512b33178ee589c46ec223828"
+
+      define_method(:install) do
+        bin.install "tix"
+      end
     end
   end
-  if Hardware::CPU.arm?
-    url "https://github.com/nyactl/tix-for-jira/releases/download/v0.2.0/tix-for-jira_0.2.0_darwin_arm64.tar.gz"
-    sha256 "a7208c5c1f8347ca775b8a7fc79406e950287f41916698f3695e16e91e19b119"
 
-    define_method(:install) do
-      bin.install "tix"
+  on_linux do
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nyactl/tix-for-jira/releases/download/v0.3.0/tix-for-jira_0.3.0_linux_amd64.tar.gz"
+      sha256 "8e64743b355083ec9ebe61e3777eed4ef1d1b76055cfc9aa9c337bd3470901c1"
+      define_method(:install) do
+        bin.install "tix"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nyactl/tix-for-jira/releases/download/v0.3.0/tix-for-jira_0.3.0_linux_arm64.tar.gz"
+      sha256 "63e4a4e34a4ea0c81734da07cfd7067dc7ed29a862d57cdb6496ff7695c717ae"
+      define_method(:install) do
+        bin.install "tix"
+      end
     end
   end
 
